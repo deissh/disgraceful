@@ -1,0 +1,22 @@
+name Hello-World;
+
+import crd;
+
+var {
+    i:integer;
+}
+
+main {
+    // это коментарий
+    /*
+        Многострочный комментарий
+    */
+    writeLn('Hello World');
+    if (true){
+        write('!');
+    }
+
+    for (i = 0; i < 10){
+        writeLn(i);
+    }
+}

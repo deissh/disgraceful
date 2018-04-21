@@ -1,0 +1,11 @@
+program Hello-World;
+
+uses crd;
+
+var i:integer;
+
+{
+    for (i:=10;i>=3;i--) do {
+        WriteLn(i);
+    };
+}.

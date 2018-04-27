@@ -3,6 +3,7 @@
 
 import ui
 import os
+from utils.parser import *
 from utils.lexer import pon2pas
 
 def main(name=''):

@@ -15,6 +15,7 @@ def tokenize(code):
 
     ui.info_section("Tokenized code")
     # построчно преобразуем(для сохранения структуры кода)
+    code = TreebankWordTokenizer().tokenize(code)
 
     for word in code:
         temp = []

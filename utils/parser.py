@@ -20,7 +20,9 @@ class Parser:
 
         # Вывод в консоль результата
         for line in tokens:
-            ui.info_1(line)
+            if line != []:
+                pass
+                #ui.info_1(line[0][0], ui.red, line[0][1])
 
         return tokens
 
@@ -33,24 +35,19 @@ class Parser:
     @param tokens: Принимает преобразованый исходный код PON в виде списка
     """
     def toBegin(self, tokens):
+        temp = []
         for line in tokens:
             for word in line:
                 if word[1] == "BEGIN":
                     word[0] = "begin"
                 elif word[1] == "END":
                     word[0] = "end"
-        return tokens
+                temp.append(word)
+        return temp
 
     """
     Используеться для преобразования коментариев написаных на PON в коментарии Pascal
     @param tokens: Принимает преобразованый исходный код PON в виде списка
     """
     def toComments(self, tokens):
-        for line in tokens:
-            for word in line:
-                if word[1] == "COMMENT_MULTI_START":
-                    word[0] = "{"
-                elif word[1] == "COMMENT_MULTI_END":
-                    word[0] = "}"
-
         return tokens

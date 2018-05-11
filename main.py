@@ -3,8 +3,8 @@
 
 import ui
 import os
-from utils.parser import *
-from utils.lexer import pon2pas
+from utils.parser import Parser
+from utils.lexer import *
 
 def main(name=''):
     # установка ui (логгера)
@@ -15,7 +15,7 @@ def main(name=''):
 
         name = ui.ask_string("File name", default="./examples/hello-world.pon")
 
-        confirm = ui.ask_yes_no("Confirm?", default=False)
+        confirm = ui.ask_yes_no("Confirm?", default=True)
         if (confirm):
             ui.info_count(1, 6, "Read file")
             file = open(name)
@@ -23,9 +23,11 @@ def main(name=''):
 
             # иницилизация класса для работы с кодом на PON и PAS
             ui.info_count(3, 6, "Init main class to convert Pascal")
-            cont = pon2pas(file.readlines())
+            cont = tokenize(file.readlines())
+            ui.info_2(cont)
             ui.info_count(4, 6, "Convert PON code to Pascal")
-            pas = cont.main()
+            pas = Parser()
+            code = pas.start(cont)
             ui.info_count(5, 6, "Save new file")
 
             # Вывод информации

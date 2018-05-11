@@ -5,49 +5,52 @@ import ui
 """
 Преобразует синтаксис PON в синтаксис Pascal.ABC
 """
-class toPas:
+class Parser:
     def __init__(self, cfg=[]):
         self.cfg = cfg
 
     @ui.Timer("Converting to Pascal style")
-    def start(self, context):
+    def start(self, tokens):
         ui.info_section("Converted to Pascal")
 
         # запуск преобразоателей кода
-        context = self.toFor(context) # Преобразование цикла for
-        context = self.toBegin(context) # Преобразование { и } в begin и end
-        context = self.toComments(context) # Преобразование коментариев
+        tokens = self.toFor(tokens) # Преобразование цикла for
+        tokens = self.toBegin(tokens) # Преобразование { и } в begin и end
+        tokens = self.toComments(tokens) # Преобразование коментариев
 
         # Вывод в консоль результата
-        for line in context:
+        for line in tokens:
             ui.info_1(line)
 
-        return context
+        return tokens
 
-    def toFor(self, context):
+    def toFor(self, tokens):
         # TODO: add parser
-        return context
+        return tokens
 
     """
     Используеться для преобразования фигурных скобок в begin\end
-    @param context: Принимает преобразованый исходный код PON в виде списка
+    @param tokens: Принимает преобразованый исходный код PON в виде списка
     """
-    def toBegin(self, context):
-        for i, line in enumerate(context):
-            for j, string in enumerate(line):
-                if context[i][j] == '{': context[i][j] = 'begin'
-                if context[i][j] == '}': context[i][j] = 'end'
-
-        return context
+    def toBegin(self, tokens):
+        for line in tokens:
+            for word in line:
+                if word[1] == "BEGIN":
+                    word[0] = "begin"
+                elif word[1] == "END":
+                    word[0] = "end"
+        return tokens
 
     """
     Используеться для преобразования коментариев написаных на PON в коментарии Pascal
-    @param context: Принимает преобразованый исходный код PON в виде списка
+    @param tokens: Принимает преобразованый исходный код PON в виде списка
     """
-    def toComments(self, context):
-        for i, line in enumerate(context):
-            for j, string in enumerate(line):
-                if context[i][j] == '/*': context[i][j] = '{'
-                if context[i][j] == '*/': context[i][j] = '}'
+    def toComments(self, tokens):
+        for line in tokens:
+            for word in line:
+                if word[1] == "COMMENT_MULTI_START":
+                    word[0] = "{"
+                elif word[1] == "COMMENT_MULTI_END":
+                    word[0] = "}"
 
-        return context
+        return tokens

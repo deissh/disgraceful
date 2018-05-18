@@ -28,6 +28,7 @@ def main(name=''):
             ui.info_count(3, 6, "Init main class to convert Pascal")
 
             cont = tokenize(file.read())
+            file.close()
 
             ui.info_2(cont)
 
@@ -40,6 +41,13 @@ def main(name=''):
                 ui.info(line[0], ui.green, line[1])
 
             ui.info_count(5, 6, "Save new file")
+
+            code = detokenize(code)
+
+            file = open("./examples/hello-world.pas", 'w+')
+            for line in code:
+                ui.info(line)
+                file.write(line + '\n')
 
             # Вывод информации
             ui.info_section("Status")

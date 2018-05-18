@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import ui
+import re
 
 """
 Преобразует синтаксис PON в синтаксис Pascal.ABC
@@ -17,6 +18,7 @@ class Parser:
         tokens = self.toFor(tokens) # Преобразование цикла for
         tokens = self.toBegin(tokens) # Преобразование { и } в begin и end
         tokens = self.toComments(tokens) # Преобразование коментариев
+        tokens = self.toVar(tokens) # Преобразование коментариев
 
         # Вывод в консоль результата
         for line in tokens:
@@ -44,6 +46,15 @@ class Parser:
                     word[0] = "end"
                 temp.append(word)
         return temp
+
+    """
+    Используеться для преобразования создание переменых
+    @param tokens: Принимает преобразованый исходный код PON в виде списка
+    """
+    def toVar(self, tokens):
+        temp = []
+
+        return tokens
 
     """
     Используеться для преобразования коментариев написаных на PON в коментарии Pascal

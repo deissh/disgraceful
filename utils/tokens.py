@@ -16,9 +16,6 @@ main = [
     (r'/\*', "COMMENT_MULTI_START"),
     (r'\*/', "COMMENT_MULTI_END"),
 
-    # названия переменных
-    (r'(i|j)', "VAR"),
-
     # значения переменных
     (r'\=[0-9]+', "SET_INT"),
     (r'\=(true|false)', "SET_BOOLEAN"),
@@ -37,11 +34,13 @@ main = [
     (r'\+', "OP_SUM"),
     (r'\-', "OP_SUB"),
 
-    (r'(\w+)', "WORD")
+    (r'(\w+)', "WORD"),
+    (r'\.', "END_MAIN_PROGRAMM"),
+    (r'.+', "SIM")
 
 ]
 
 # после токенизации
-post = [
-    (r'(\w+)+(\(|\))', "FUNCTION")
+constr = [
+    (r'(\w+).(\w+)', "INIT_VAR_CONSTR")
 ]

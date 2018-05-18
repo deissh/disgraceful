@@ -47,10 +47,21 @@ def tokenize(code):
 @ui.Timer("Detokenizing code")
 def detokenize(tokens):
     text = []
+    code = []
+    temp = []
 
-    ui.info_section("Detokenized code")
+    for word in tokens:
+        if word[1] in ['END_LINE', 'BEGIN', 'END_MAIN_PROGRAMM']:
+            temp.append(word[0])
+            code.append(temp)
+            temp = []
+        else:
+            temp.append(word[0])
+    # TODO: заглушка для ошибки, изменить логику!
+    code.append(temp)
+
     # построчно преобразуем(для сохранения структуры кода)
-    for line in tokens:
+    for line in code:
         conv = TreebankWordDetokenizer().detokenize(line)
         # вывод работы
         ui.info(conv)

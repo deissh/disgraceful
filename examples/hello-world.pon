@@ -4,7 +4,11 @@ uses crd;
 uses graph;
 
 var i:integer;
+    j:booleat;
 
 {
+    for i:=1 to 10 do {
+        Writeln(i);
+    };
     Writeln(i);
 }.

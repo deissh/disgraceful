@@ -26,7 +26,6 @@ main = [
     # синтаксис
     (r'\;', "END_LINE"),
 
-    (r'var', "INIT_VAR"),
     (r'const', "CONSTANTA"),
 
     # базовые операции
@@ -42,5 +41,8 @@ main = [
 
 # после токенизации
 constr = [
-    (r'(\w+).(\w+)', "INIT_VAR_CONSTR")
+    (r'(boolean|integer).(\w+)(.*:=.*(\w+)|.*;)', "INIT_VAR_CONSTR"),
+
+
+    (r'(.+)', "LINE")
 ]

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "4"
+  - "5"
+
+script:
+  - "npm i --dev && npm run test"
+
+notifications:
+  email: false
+
+sudo: false
+
+before_install:
+ - "npm install -g npm@latest"

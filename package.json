@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node ./test/core.spec.js"
+    "test": "mocha ./test/core.spec.js"
   },
   "repository": {
     "type": "git",

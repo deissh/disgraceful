@@ -24,10 +24,11 @@
     "url": "https://github.com/Hatollint/disgraceful/issues"
   },
   "homepage": "https://github.com/Hatollint/disgraceful#readme",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^2.15.1"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
-    "commander": "^2.15.1",
     "generate-changelog": "^1.7.1",
     "mocha": "^5.2.0"
   }

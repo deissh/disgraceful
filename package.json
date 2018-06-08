@@ -1,28 +1,33 @@
 {
-  "name": "script2pas",
+  "name": "disgraceful",
   "version": "1.0.0",
-  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8368f0a338b4b4b9c93bfda0a3d19dd)](https://www.codacy.com/app/Hatollint/script2pas?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hatollint/script2pas&amp;utm_campaign=Badge_Grade)",
+  "description": "⚡️Disgraceful - транслируемый язык программирования в Pascal",
   "main": "./src/cli.js",
   "directories": {
     "example": "examples",
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node ./src/cli.js",
+    "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hatollint/script2pas.git"
+    "url": "git+https://github.com/Hatollint/disgraceful.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hatollint/script2pas/issues"
+    "url": "https://github.com/Hatollint/disgraceful/issues"
   },
-  "homepage": "https://github.com/Hatollint/script2pas#readme",
-  "dependencies": {
+  "homepage": "https://github.com/Hatollint/disgraceful#readme",
+  "dependencies": {},
+  "devDependencies": {
     "chai": "^4.1.2",
-    "gulp": "^3.9.1",
-    "gulp-add": "^0.1.0"
+    "generate-changelog": "^1.7.1",
+    "mocha": "^5.2.0"
   }
 }

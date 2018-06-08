@@ -7,6 +7,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c09ae6b54694346b0b7a7deb0debbc7)](https://app.codacy.com/app/Hatollint/disgraceful?utm_source=github.com&utm_medium=referral&utm_content=Hatollint/disgraceful&utm_campaign=badger)
 [![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful) [![Greenkeeper badge](https://badges.greenkeeper.io/Hatollint/disgraceful.svg)](https://greenkeeper.io/)
+
 [![Throughput Graph](https://graphs.waffle.io/Hatollint/disgraceful/throughput.svg)](https://waffle.io/Hatollint/disgraceful/metrics/throughput)
 
 

@@ -1,10 +1,14 @@
-const
-  chai = require('chai'),
-  cases = require('./compile.cases'),
-  pon = require('../src/core');
+const should = require('chai').should();
+const mocha = require('mocha');
+const cases = require('./compile.test');
+const core = require('../src/core');
 
 
 describe('core', () => {
-  it('can compile to pas', () => cases.map(([pas, pon]) => chai.assert.equal(pon.compile(pon, "pon"), pon)));
-  it('can decompile from pas', () => cases.map(([js, ys]) => chai.assert.equal(pon.compile(pas, "pas"), pas)));
+    it('can compile to pas', () => {
+        cases.map(([pas, pon]) => {
+            let res = core.compile(pon, "pon");
+            res.chould.equal(pas)
+        });
+    });
 });

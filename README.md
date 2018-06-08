@@ -6,7 +6,7 @@
 
 
 ![Github All Releases](https://img.shields.io/github/downloads/Hatollint/disgraceful/total.svg)
-[![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful)
+[![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful) [![Greenkeeper badge](https://badges.greenkeeper.io/Hatollint/disgraceful.svg)](https://greenkeeper.io/)
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "disgraceful",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "⚡️Disgraceful - транслируемый язык программирования в Pascal",
   "main": "./src/cli.js",
   "directories": {

@@ -1,5 +1,15 @@
 # Disgraceful
 
+[![GitHub issues](https://img.shields.io/github/issues/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/blob/master/LICENSE)
+
+
+![Github All Releases](https://img.shields.io/github/downloads/Hatollint/disgraceful/total.svg)
+[![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful)
+
+
+
 Disgraceful is the world's first scripting programming language translated into pure Pascal code !. It allows you to quickly join the ranks of programmers and the development process.
 
 ## Connecting the npm module

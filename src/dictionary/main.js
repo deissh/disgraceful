@@ -16,6 +16,16 @@ module.exports = [
         "end"
     ],
 
+    //def function
+    [
+        "name",
+        "program"
+    ],
+    [
+        "import",
+        "uses"
+    ],
+
     // comments
     [
         "/*",
@@ -25,14 +35,4 @@ module.exports = [
         "*/",
         "}"
     ],
-
-    //def function
-    [
-        "name",
-        "program"
-    ],
-    [
-        "import",
-        "uses"
-    ]
 ];

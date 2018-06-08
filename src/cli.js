@@ -1,27 +1,44 @@
 #!/usr/bin/env node
-/*!
- * YoptaScript v0.3.4 (https://yopta.space)
- * Copyright (c) 2016-2017 Yopta.Space project and Contributors
- * Licensed under the MIT license
- */
 
-const
-  yopt = require('./core'),
-  fs = require('fs');
+const commander = require('commander');
+const package = require('../package.json');
+const yopt = require('./core');
+const fs = require('fs');
 
-let
-  filepath = process.argv[2];
+commander
+    .version(package.version, '-v, --version')
+    .command('compile <path>')
+    .option('-d, --dir', 'compile dirictory')
+    .action(function(path, cmd) {
+        if (cmd.dir) {
+            return process.exit(1);
+        } else {
+            fs.readFile(path, 'utf8', function(err, content) {
+                if (err) {
+                    console.error(err);
+                    return process.exit(1);
+                }
 
-if (!filepath) {
-    console.log('Missing filename argument.');
-    return process.exit();
-}
+                console.log(yopt.compile(content, "pon"));
+            });
+        }
+    });
 
-fs.readFile(filepath, 'utf8', function (err, content) {
-    if (err) {
-        console.error(err);
-        return process.exit(1);
-    }
+commander
+    .command('decompile <path>')
+    .option('-d, --dir', 'decompile dirictory')
+    .action(function(path, cmd) {
+        if (cmd.dir) {
+            return process.exit(1);
+        } else {
+            fs.readFile(path, 'utf8', function(err, content) {
+                if (err) {
+                    console.error(err);
+                    return process.exit(1);
+                }
 
-    console.log(yopt.compile(content, "pon"));
-});
+                console.log(yopt.compile(content, "pas"));
+            });
+        }
+    });
+commander.parse(process.argv);

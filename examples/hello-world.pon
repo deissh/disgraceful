@@ -4,10 +4,12 @@ import graph;
 
 var i:integer;
 
-{
+// coment
 /*
 123
 */
+
+{
     for i:=1 to 10 do {
         Writeln(i);
     };

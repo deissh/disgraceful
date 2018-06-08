@@ -1,11 +1,9 @@
-const
-  dictionary = require('./dictionary/main');
+const dictionary = require('./dictionary/main');
 
-const
-  LANGS = {
+let LANGS = {
     pon: 0,
     pas: 1,
-  };
+};
 
 module.exports = {
     compile,
@@ -23,7 +21,7 @@ function escapeRegExp(str) {
 }
 
 function ReplaceAll(str, search, replacement) {
-    var re = new RegExp(escapeRegExp(search), 'g');
+    let re = new RegExp(escapeRegExp(search), 'g');
     return str.replace(re, replacement);
 }
 
@@ -31,15 +29,15 @@ function compile(text, lang) {
     /* text - текст для реплейса
      * lang - язык текста ('pon' or 'pas')
      */
-    var commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
-    var tmpToken = 'pon_' + (new Date()).getTime() + '_';
-    var rStringLiterals = {};
+    let commentRegExp = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g;
+    let tmpToken = 'pon_' + (new Date()).getTime() + '_';
+    let rStringLiterals = {};
     text = text.replace(/\"(?:\\.|[^\"\\])*\"|\'(?:\\.|[^\'\\])*\'/g, function (val, pos) {
-        var needKey = tmpToken + pos;
+        let needKey = tmpToken + pos;
         rStringLiterals[needKey] = val;
         return needKey;
     });
-    var commentsArray = text.match(commentRegExp) || [];
+    let commentsArray = text.match(commentRegExp) || [];
     text = iterateText(text, lang);
     // comeback comments
     text = text.replace(commentRegExp, function () {
@@ -59,8 +57,7 @@ function compile(text, lang) {
  * @param to язык текста ('pon' or 'pas')
  */
 function iterateText(text, to = 'pas') {
-    let
-      lang = LANGS[to];
+    let lang = LANGS[to];
 
     dictionary
         .sort((a, b) => {

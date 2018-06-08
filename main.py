@@ -45,8 +45,8 @@ def main(name=''):
 
             code = detokenize(code)
 
-            print(code)
-            print(tConstruction(code))
+            #print(code)
+            #print(tConstruction(code))
 
             pasfile = str(name).replace('.pon', '.pas')
 

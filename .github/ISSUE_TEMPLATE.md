@@ -1,6 +1,6 @@
 ## The problem
 
-Briefly describe the issue you are experiencing (or the feature you want to see added to Appium). Tell us what you were trying to do and what happened instead. Remember, this is _not_ a place to ask questions. For that, go to http://discuss.appium.io!
+Briefly describe the issue you are experiencing (or the feature you want to see added to Appium). Tell us what you were trying to do and what happened instead. Remember, this is _not_ a place to ask questions. 
 
 ## Environment
 
@@ -27,6 +27,6 @@ If you are reporting a bug, _always_ include Appium logs!
 
 Please remember that with sample code it's easier to reproduce the bug and it's much faster to fix it.
 
-Please git clone https://github.com/appium/sample-code and use one of your favourite languages and sample apps to reproduce the issue.
+Please git clone https://github.com/Hatollint/disgraceful and use one of your favourite languages and sample apps to reproduce the issue.
 
 In case a similar scenario is missing in sample-code, please submit a PR with one of the sample apps provided.

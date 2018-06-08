@@ -1,0 +1,28 @@
+{
+  "name": "script2pas",
+  "version": "1.0.0",
+  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8368f0a338b4b4b9c93bfda0a3d19dd)](https://www.codacy.com/app/Hatollint/script2pas?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hatollint/script2pas&amp;utm_campaign=Badge_Grade)",
+  "main": "./src/cli.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hatollint/script2pas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hatollint/script2pas/issues"
+  },
+  "homepage": "https://github.com/Hatollint/script2pas#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-add": "^0.1.0"
+  }
+}

@@ -1,14 +1,13 @@
 # Disgraceful
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c09ae6b54694346b0b7a7deb0debbc7)](https://app.codacy.com/app/Hatollint/disgraceful?utm_source=github.com&utm_medium=referral&utm_content=Hatollint/disgraceful&utm_campaign=badger)
 [![GitHub issues](https://img.shields.io/github/issues/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/stargazers)
 [![GitHub license](https://img.shields.io/github/license/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/blob/master/LICENSE)
-
-
 ![Github All Releases](https://img.shields.io/github/downloads/Hatollint/disgraceful/total.svg)
-[![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful) [![Greenkeeper badge](https://badges.greenkeeper.io/Hatollint/disgraceful.svg)](https://greenkeeper.io/)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c09ae6b54694346b0b7a7deb0debbc7)](https://app.codacy.com/app/Hatollint/disgraceful?utm_source=github.com&utm_medium=referral&utm_content=Hatollint/disgraceful&utm_campaign=badger)
+[![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful) [![Greenkeeper badge](https://badges.greenkeeper.io/Hatollint/disgraceful.svg)](https://greenkeeper.io/)
+[![Throughput Graph](https://graphs.waffle.io/Hatollint/disgraceful/throughput.svg)](https://waffle.io/Hatollint/disgraceful/metrics/throughput)
 
 
 Disgraceful is the world's first scripting programming language translated into pure Pascal code !. It allows you to quickly join the ranks of programmers and the development process.

@@ -7,12 +7,15 @@
     "example": "examples",
     "test": "test"
   },
+  "bin": {
+    "disgraceful": "./src/cli.js"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node ./src/cli.js",
-    "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm update",
-    "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm update",
-    "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && npm update"
+    "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
+    "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
+    "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && npm publish"
   },
   "repository": {
     "type": "git",

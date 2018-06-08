@@ -1,17 +1,38 @@
 module.exports = [
-	/*
-		Example
-		[
-			"", // pon
-			"" // pas
-		]
-	*/
-	[
-		"{",
-		"begin"
-	],
-	[
-		"}",
-		"end"
-	]
+    /*
+    	Example
+    	[
+    		"", // pon
+    		"" // pas
+    	]
+    */
+    //systems
+    [
+        "{",
+        "begin"
+    ],
+    [
+        "}",
+        "end"
+    ],
+
+    // comments
+    [
+        "/*",
+        "{ "
+    ],
+    [
+        "*/",
+        "}"
+    ],
+
+    //def function
+    [
+        "name",
+        "program"
+    ],
+    [
+        "import",
+        "uses"
+    ]
 ];

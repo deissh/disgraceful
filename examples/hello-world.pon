@@ -1,11 +1,13 @@
-program Hello-World;
-
-uses crd;
-uses graph;
+name hello;
+import crd;
+import graph;
 
 var i:integer;
 
 {
+/*
+123
+*/
     for i:=1 to 10 do {
         Writeln(i);
     };

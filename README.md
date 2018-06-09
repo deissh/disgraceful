@@ -5,6 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/Hatollint/disgraceful.svg)](https://github.com/Hatollint/disgraceful/blob/master/LICENSE)
 ![Github All Releases](https://img.shields.io/github/downloads/Hatollint/disgraceful/total.svg)
 
+[![Build Status](https://travis-ci.org/Hatollint/disgraceful.svg?branch=master)](https://travis-ci.org/Hatollint/disgraceful)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c09ae6b54694346b0b7a7deb0debbc7)](https://app.codacy.com/app/Hatollint/disgraceful?utm_source=github.com&utm_medium=referral&utm_content=Hatollint/disgraceful&utm_campaign=badger)
 [![npm version](https://badge.fury.io/js/disgraceful.svg)](https://badge.fury.io/js/disgraceful) [![Greenkeeper badge](https://badges.greenkeeper.io/Hatollint/disgraceful.svg)](https://greenkeeper.io/)
 

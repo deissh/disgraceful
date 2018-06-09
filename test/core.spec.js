@@ -4,6 +4,6 @@ const cases = require('./compile.test');
 const core = require('../src/core');
 
 describe('core', () => {
-    it('can compile to js', () => cases.map(([js, ys]) => chai.assert.equal(yopt.compile(ys, "ys"), js)));
-    it('can decompile from js', () => cases.map(([js, ys]) => chai.assert.equal(yopt.compile(js, "js"), ys)));
+    it('can compile', () => cases.map(([pas, pon]) => chai.assert.equal(core.compile(pon, "pon"), pas)));
+    it('can decompile', () => cases.map(([pas, pon]) => chai.assert.equal(core.compile(pas, "pas"), pon)));
 });

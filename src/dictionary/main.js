@@ -25,14 +25,4 @@ module.exports = [
         "import",
         "uses"
     ],
-
-    // comments
-    [
-        "/*",
-        "{ "
-    ],
-    [
-        "*/",
-        "}"
-    ],
 ];

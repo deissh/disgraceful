@@ -11,17 +11,23 @@
 [![Throughput Graph](https://graphs.waffle.io/Hatollint/disgraceful/throughput.svg)](https://waffle.io/Hatollint/disgraceful/metrics/throughput)
 
 
-Disgraceful is the world's first scripting programming language translated into pure Pascal code !. It allows you to quickly join the ranks of programmers and the development process.
+Disgraceful - это язык для Pascal.ABC приложения. Disgraceful поддерживает инструменты для широкомасштабных приложений Pascal для любого браузера для любого хоста на любой ОС. Disgraceful компилируется на читаемый, основанный на стандартах Pascal. 
 
-## Connecting the npm module
-Disgraceful can also be connected to your project using the npm batch manager. Simply go to the project folder using the terminal and type 
+## Установка
+Disgraceful можно установить с помощью пакетного менеджера NPM. Для это нужно выполнить команду:
 ```bash
 npm install disgraceful
 ```
-or type 
+или для глобальной установки пакета
 ```bash
 npm install -g disgraceful
 ```
-to install the global jpt.
 
-We are glad for any help in finding bugs and for everyone who is ready to help us to continue what we started! 💕
+## Использование CLI
+После установки Disgraceful будет доступен как модуль и как CLI (Comand Line Interface). Для использования как CLI нужно выполнить команду:
+```bash
+df-cli -h
+```
+После выполнения вы увидете справку по CLI.
+
+
